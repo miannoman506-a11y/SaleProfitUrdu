@@ -21,6 +21,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
+      - name: Add Urdu Nastaliq font
+        run: |
+          mkdir -p app/src/main/assets
+          curl -fL 'https://raw.githubusercontent.com/google/fonts/main/ofl/notonastaliqurdu/NotoNastaliqUrdu%5Bwght%5D.ttf' -o app/src/main/assets/NotoNastaliqUrdu-Regular.ttf
       - name: Build APK
         run: gradle assembleDebug
       - name: Upload APK
