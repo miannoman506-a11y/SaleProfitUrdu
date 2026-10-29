@@ -25,6 +25,7 @@ jobs:
         run: |
           mkdir -p app/src/main/assets
           curl -fL 'https://raw.githubusercontent.com/google/fonts/main/ofl/notonastaliqurdu/NotoNastaliqUrdu%5Bwght%5D.ttf' -o app/src/main/assets/NotoNastaliqUrdu-Regular.ttf
+          curl -fL 'https://raw.githubusercontent.com/google/fonts/main/ofl/notonastaliqurdu/OFL.txt' -o app/src/main/assets/OFL-NotoNastaliqUrdu.txt
           curl -fL 'https://raw.githubusercontent.com/google/fonts/main/ofl/notonaskharabic/NotoNaskhArabic%5Bwght%5D.ttf' -o app/src/main/assets/NotoNaskhArabic-Regular.ttf
       - name: Build APK
         run: gradle assembleDebug
